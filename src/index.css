@@ -1,13 +1,262 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
+
+
 body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #7e4700;
+  background-image: url(dark-wood.png);
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  min-height:100%;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+header {
+  width: 100%;
+  height: 15vh;
+  background-color: #ffbb00;
+  background-image: url(dark-wood-sideways.png);
+  box-shadow: 1px 1px 5px black;
+  z-index:999;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+h1 {
+  margin: 0px !important;
+}
+.box
+{
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh
+}
+.map
+{
+  margin-left: 20%;
+  width: 80%;
+  height: 100%;
+}
+.content{
+  flex: 1;
+  height: 60vh;
+}
+
+.destination {
+  width: 100%;
+  display: inline;
+}
+.destination>div{
+  display: inline;
+}
+
+.destination input{
+  width: 70%;
+}
+.midsection{
+  width:100%;
+  height: 77vh;
+}
+.leftpanel {
+  width:20%;
+  background-color: #f78000;
+  background-image: url(dark-wood.png);
+  float: left;
+  text-align: center;
+  height: 77.55vh;
+}
+form>input{
+  width: 70%;
+}
+.loading{
+  padding-top: 25vh;
+  display: block;
+  margin: auto;
+}
+.rightpanel {
+  outline: 2px brown solid;
+  position: absolute;
+  width: 40%;
+  height: 77.5vh;
+  right: 0;
+  background-color: rgba(0,0,0,0.65);
+  color: white;
+  z-index: 5;
+  overflow: auto;
+}
+
+.rightpanel h1{
+  display: inline-block;
+}
+
+.imagecontainer{
+  height: 40vh;
+}
+
+.imagecontainer>img{
+  max-width: 70%;
+  max-height: 40vh;
+  margin: auto;
+  display: block;
+}
+.imageinfo{
+  text-align: center;
+}
+.imageinfo>button{
+  top: 45vh;
+  position: absolute;
+}
+
+.leftbutton{left:20%}
+.rightbutton{right:20%}
+
+.btn {
+  display: inline-block;
+  background: #000;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  margin: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 15px;
+  font-family: inherit;
+}
+
+.btn:focus {
+  outline: none;
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
+
+.btn-block {
+  display: block;
+  width: 100%;
+}
+
+.marker-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.marker-btn img {
+  width: 50px;
+  height: 50px;
+}
+
+.popup {
+  font-size: medium;
+  cursor: auto;
+}
+
+.mapboxgl-popup-content{
+  padding: 0px !important;
+  width: 12vw !important;
+  font-size: medium;
+  cursor: auto;
+}
+
+.popup img{
+  width: 100%;
+  height: 50%;
+}
+
+.mapboxgl-popup-close-button{ background-color: white !important;}
+
+.popup h2, .popup p, .popup hr{
+  margin: 0px;
+  padding-left: 10px;
+  padding-right: 10px;
+  user-select: text;
+}
+.popup h2{
+  font-size: medium;
+  padding-bottom: 5px;
+}
+
+.popup p{
+  font-size: small;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.extraInfo{
+  text-align: center;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.extraInfo:hover{
+  background-color: #F1F1F1;
+}
+
+.leftheadercolumn{
+  width:20%;
+  text-align:center;
+}
+
+.leftheadercolumn>img{
+  width: 20%;
+  height: 50px;
+  margin-inline: 5px;
+  margin-bottom: -25px;
+}
+
+.box .row.footer {
+  text-align: center;
+  color: white;
+  text-decoration: underline;
+}
+.footer>p{
+  cursor: pointer;
+  margin-inline: 0px;
+}
+.attraction-holder{
+  font-size: 15px;
+  height: 50vh;
+}
+.attractions{
+  padding: 3px;
+  overflow: auto;
+  height: 48.7vh;
+  background-color: #ffd479;
+  background-image: url(dark-wood.png);
+}
+.attraction{
+  cursor: pointer;
+  display: block;
+  margin: auto;
+  border: 1px solid black;
+  border-radius: 10px;
+  text-align: left;
+}
+
+.imgholder{
+  width: 25%;
+  height: 30px;
+  margin-top: -15px;
+}
+.imgholder>img{
+  width: 30px;
+  height: 30px;
+  padding-top: 3.7vh;
+  display: block;
+  margin: auto;
+}
+
+.attraction>p{
+  display: block;
+  width:70%;
+  margin-left: 20%;
+  margin-top: 0px;
+}
+
+.attraction:hover{
+  background-color: #fde681;
+}
+.selected{
+  display: inline;
 }

@@ -1,0 +1,100 @@
+{
+    "attractions": [
+        {
+            "id": 9755,
+            "title": "Central Railroad of New Jersey Terminal",
+            "location": "Jersey City, New Jersey",
+            "description": "Hidden in plain sight on the Hudson River is an abandoned train station where nature has taken over.",
+            "url": "http://www.atlasobscura.com/places/central-railroad-of-new-jersey-terminal",
+            "img": "https://assets.atlasobscura.com/media/W1siZiIsInVwbG9hZHMvcGxhY2VfaW1hZ2VzLzRmMzIxYmI2NGMwNTI2NmZiZF9jZW50cmFsbmozLmpwZyJdLFsicCIsImNvbnZlcnQiLCIiXSxbInAiLCJjb252ZXJ0IiwiLXF1YWxpdHkgODEgLWF1dG8tb3JpZW50Il0sWyJwIiwidGh1bWIiLCI2MDB4NDAwIyJdXQ",
+            "coordinates": {
+                "Latitude": 40.706994,
+                "Longitude": -74.034959
+            }
+        },
+        {
+            "id": 25343,
+            "title": "Ellis Island Immigrant Hospital",
+            "location": "Jersey City, New Jersey",
+            "description": "Now abandoned, the first public health hospital in the U.S. saw more than one million immigrants from around the world.",
+            "url": "http://www.atlasobscura.com/places/ellis-island-immigrant-hospital",
+            "img": "https://assets.atlasobscura.com/media/W1siZiIsInVwbG9hZHMvcGxhY2VfaW1hZ2VzL2FlNmY5OTBjMTA1OGM0MDBiYV9JTUdfODcxNS5KUEciXSxbInAiLCJjb252ZXJ0IiwiIl0sWyJwIiwiY29udmVydCIsIi1xdWFsaXR5IDgxIC1hdXRvLW9yaWVudCJdLFsicCIsInRodW1iIiwiNjAweDQwMCMiXV0/IMG_8715.JPG",
+            "coordinates": {
+                "Latitude": 40.697617,
+                "Longitude": -74.042458
+            }
+        },
+        {
+            "id": 35318,
+            "title": "White Mana Diner",
+            "location": "Jersey City, New Jersey",
+            "description": "This unassuming retro burger joint was billed as “diner of the future” at the 1939 World's Fair.",
+            "url": "http://www.atlasobscura.com/places/white-mana-diner",
+            "img": "https://assets.atlasobscura.com/media/W1siZiIsInVwbG9hZHMvcGxhY2VfaW1hZ2VzLzAzMmM2NjEwLTRkNzMtNGI1Ny1hMGIyLTc5NmE4OTEzNzAzM2YzYWY5NWEyZDZiMThiYmQyNV83MTcwOTExOV81OTkyMzM1NDc1MTIzNDNfNDQ2NTcyMTQwMjQxMDk1MTg2NF9uLmpwZyJdLFsicCIsImNvbnZlcnQiLCIiXSxbInAiLCJjb252ZXJ0IiwiLXF1YWxpdHkgODEgLWF1dG8tb3JpZW50Il0sWyJwIiwidGh1bWIiLCI2MDB4NDAwIyJdXQ/71709119_599233547512343_4465721402410951864_n.jpg",
+            "coordinates": {
+                "Latitude": 40.747056,
+                "Longitude": -74.061567
+            }
+        },
+        {
+            "id": 19571,
+            "title": "Infinity Climber",
+            "location": "Jersey City, New Jersey",
+            "description": "A playground inspired by differential calculus dangles from the ceiling of the Liberty Science Center.",
+            "url": "http://www.atlasobscura.com/places/infinity-climber",
+            "img": "https://assets.atlasobscura.com/media/W1siZiIsInVwbG9hZHMvcGxhY2VfaW1hZ2VzL3RyZml5MHBtMDlnNGM4OTA3ZmYwZGQ5N2E3ZThkX0lNR180NTA2ICgyKS5KUEciXSxbInAiLCJjb252ZXJ0IiwiIl0sWyJwIiwiY29udmVydCIsIi1xdWFsaXR5IDgxIC1hdXRvLW9yaWVudCJdLFsicCIsInRodW1iIiwiNjAweDQwMCMiXV0/IMG_4506%20%282%29.JPG",
+            "coordinates": {
+                "Latitude": 40.708312,
+                "Longitude": -74.054482
+            }
+        },
+        {
+            "id": 12016,
+            "title": "The Black Tom Explosion Memorial",
+            "location": "Jersey City, New Jersey",
+            "description": "A simple plaque remembers an act of WWI terrorism that obliterated an island and forever scarred the Statue of Liberty.",
+            "url": "http://www.atlasobscura.com/places/the-black-tom-explosion-memorial-jersey-city-new-jersey",
+            "img": "https://assets.atlasobscura.com/media/W1siZiIsInVwbG9hZHMvcGxhY2VfaW1hZ2VzLzNmOGZmNjU0MDUwM2RiNjZhZl9JTUdfNDQwNy5KUEciXSxbInAiLCJjb252ZXJ0IiwiLWF1dG8tb3JpZW50ICJdLFsicCIsInRodW1iIiwiMzE0MHgyMDkzKzArMCJdLFsicCIsImNvbnZlcnQiLCItcXVhbGl0eSA4MSAtYXV0by1vcmllbnQiXSxbInAiLCJ0aHVtYiIsIjYwMHg0MDAjIl1d",
+            "coordinates": {
+                "Latitude": 40.714838,
+                "Longitude": -74.039078
+            }
+        },
+        {
+            "id": 3145,
+            "title": "The Colgate Clock",
+            "location": "Jersey City, New Jersey",
+            "description": "On the Hudson resides one of the largest clocks in the world.",
+            "url": "http://www.atlasobscura.com/places/the-colgate-clock-jersey-city-new-jersey",
+            "img": "https://assets.atlasobscura.com/media/W1siZiIsInVwbG9hZHMvcGxhY2VfaW1hZ2VzL2M0MGE3NGQxMTU0YzNlMmVkMjY0ZTI5MTY3NTY5NjMwNWVhMzQxNGEuanBnIl0sWyJwIiwiY29udmVydCIsIiJdLFsicCIsImNvbnZlcnQiLCItcXVhbGl0eSA4MSAtYXV0by1vcmllbnQiXSxbInAiLCJ0aHVtYiIsIjYwMHg0MDAjIl1d/c40a74d1154c3e2ed264e291675696305ea3414a.jpg",
+            "coordinates": {
+                "Latitude": 40.712028,
+                "Longitude": -74.033889
+            }
+        },
+        {
+            "id": 35350,
+            "title": "Jersey City and Harsimus Cemetery",
+            "location": "Jersey City, New Jersey",
+            "description": "Filled with history, this cemetery is maintained each summer by a few hungry goats.",
+            "url": "http://www.atlasobscura.com/places/jersey-city-and-harsimus-cemetery",
+            "img": "https://assets.atlasobscura.com/media/W1siZiIsInVwbG9hZHMvcGxhY2VfaW1hZ2VzL2M3NmJmMmNhLTk3OTMtNGUyYy05NzNkLTFiMjRlYjE3YmVjZWVkZjNkYzQ1YmE1ZTE0MDZkMl8xMzMzNjQ3MjE1NF9kOGJmNDliZGQwX2IuanBnIl0sWyJwIiwiY29udmVydCIsIiJdLFsicCIsImNvbnZlcnQiLCItcXVhbGl0eSA4MSAtYXV0by1vcmllbnQiXSxbInAiLCJ0aHVtYiIsIjYwMHg0MDAjIl1d/13336472154_d8bf49bdd0_b.jpg",
+            "coordinates": {
+                "Latitude": 40.727173,
+                "Longitude": -74.055165
+            }
+        },
+        {
+            "id": 13427,
+            "title": "The Katyń Massacre Memorial",
+            "location": "Jersey City, New Jersey",
+            "description": "This evocative New Jersey statue.",
+            "url": "http://www.atlasobscura.com/places/the-katyn-massacre-memorial-jersey-city-new-jersey",
+            "img": "https://assets.atlasobscura.com/media/W1siZiIsInVwbG9hZHMvcGxhY2VfaW1hZ2VzLzVmMjFhMzhiMjE5MTM0YzI4OV9JTUdfNDQyNC5KUEciXSxbInAiLCJjb252ZXJ0IiwiIl0sWyJwIiwiY29udmVydCIsIi1xdWFsaXR5IDgxIC1hdXRvLW9yaWVudCJdLFsicCIsInRodW1iIiwiNjAweDQwMCMiXV0",
+            "coordinates": {
+                "Latitude": 40.716105,
+                "Longitude": -74.033091
+            }
+        }
+    ]
+}

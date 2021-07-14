@@ -1,0 +1,14 @@
+{ "icons": {
+        "default_marker":"place-localizer.svg",
+        "Cave":"cave.svg",
+        "Mine":"mining-industry.svg",
+        "Restaurant":"fork.svg",
+        "Diner":"fork.svg",
+        "Park":"park.svg",
+        "Monument":"obelisk.svg",
+        "Memorial":"obelisk.svg",
+        "Museum":"museum.svg",
+        "Cemetery" : "grave.svg",
+        "Grave" : "grave.svg"
+    }
+}
