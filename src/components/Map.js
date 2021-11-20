@@ -1,77 +1,108 @@
-import ReactMapGL, { Marker, Popup ,NavigationControl} from "react-map-gl";
-import React from "react"
-import { useEffect } from "react";
+/* global google */
+import React from "react";
+import {
+  withGoogleMap,
+  GoogleMap,
+  withScriptjs,
+  Marker,
+  DirectionsRenderer,
+  InfoWindow
+} from "react-google-maps";
+import MapStyle from "../mapStyle.json";
+import { useState, useEffect } from "react";
 import * as data from "./icon-mapping.json";
-import * as place from "./data2.json";
 
 const icons = data.icons;
-const navControlStyle= {
-  right: 10,
-  top: 10
-};
-
 function iconMap(name){
-  for (const word of name.split(' ')) {
+  for (const word of name.split(' ').slice().reverse()) {
     if(icons.hasOwnProperty(word)){
       return "/icons/" + icons[word]}
   }
   return "/icons/" + icons.default_marker;
 }
 
-const Map = ({attractions, selectedAttraction, setSelecteddAttraction, setVisibility, setCurrentID, visible,closeRightPanel,
-  viewport,setViewport}) => {
+const MapDirectionsRenderer = ({ places, travelMode }) => {
+  const [directions, setDirections] = useState(null);
+  const [error, setError] = useState(null);
+
   useEffect(() => {
-    const listener = e => {
-      if (e.key === "Escape") {
-        setSelecteddAttraction(null);
-      }
-    };
-    window.addEventListener("keydown", listener);
+    if(places.length>1){
+      const waypoints = places.map(p =>({
+          location: {lat: p.coordinates.Latitude, lng:p.coordinates.Longitude},
+          stopover: true
+      }))
+      const origin = waypoints.shift().location;
+      const destination = waypoints.pop().location;
 
-    return () => {
-      window.removeEventListener("keydown", listener);
-    };
-  }, []);
+      const directionsService = new google.maps.DirectionsService();
+      directionsService.route(
+        {
+          origin: origin,
+          destination: destination,
+          travelMode: travelMode,
+          waypoints: waypoints
+        },
+        (result, status) => {
+          if (status === google.maps.DirectionsStatus.OK) {
+              setDirections(result);
+          } else {
+              setError(result);
+          }
+        }
+      );
+    }
+  }, [])
 
-    return (
-      <div className="map">
-          <ReactMapGL
-            {...viewport}
-            mapboxApiAccessToken={process.env.REACT_APP_MAPBOX_TOKEN}
-            mapStyle="mapbox://styles/michaeldamiano/ckphllv0i2rjp17rs450vpz31"
-            onViewportChange={viewport => {
-              setViewport(viewport);
-            }}
-          >
-            <NavigationControl style={navControlStyle} />
-
-            {attractions ? (
-            attractions.map(attraction => (
-            <Marker
-              key={attraction.id}
-              latitude={attraction.coordinates.Latitude}
-              longitude={attraction.coordinates.Longitude}
-            >
-              <button
-                className="marker-btn"
-                onMouseOver={e => {
-                e.preventDefault();
-                if(!visible){setSelecteddAttraction(attraction);}
-              }}
-              >
-                <img src={iconMap(attraction.title)} alt={iconMap(attraction.title)} />
-              </button>
-            </Marker>
-            ))):(null)}
+  return (
+    error ? (<h1>{this.state.error}</h1>):
+    (directions && <DirectionsRenderer directions={directions}/>) 
+  )
+}
 
 
-            {selectedAttraction ? (
-              <Popup 
+const Map = withScriptjs(
+  withGoogleMap(({center,zoom,mode,overlap,exMarkers, onAdd,id ,navMarkers, selectedAttraction, setSelecteddAttraction,setVisibility, setCurrentID, visible,closeMarker,
+    })  => {
+      const [added, setAdded] = useState(false);
+    return(
+    <GoogleMap className="map"
+      defaultCenter={center}
+      defaultZoom={zoom}
+      options={{
+        styles: MapStyle,
+    }}
+    >
+      {mode || overlap?(
+        exMarkers.map((marker, index) => {
+        const position = { lat: marker.coordinates.Latitude, lng: marker.coordinates.Longitude };
+        return <Marker 
+                key={index} 
+                position={position} 
+                optimized="true"
+                icon={{
+                  scaledSize: new google.maps.Size(50, 50),
+                  url: iconMap(marker.title)
+                }}
+                onClick={() => {
+                  if(!visible){setSelecteddAttraction(marker);
+                    setAdded(false);}
+                }}
+                />;
+      })) :(null)}
+      {!mode || overlap? (
+        <MapDirectionsRenderer
+          key={navMarkers.map(marker => {return marker.address})}
+          places={navMarkers}
+          travelMode={google.maps.TravelMode.DRIVING}
+        />
+      ):(null)}
+
+{selectedAttraction ? (
+              <InfoWindow 
                 className="popup"
-                latitude={selectedAttraction.coordinates.Latitude}
-                longitude={selectedAttraction.coordinates.Longitude}
-                closeOnClick={false}
-                onClose={closeRightPanel}
+                closeOnClick={true}
+                onCloseClick={closeMarker}
+                position={{ lat: selectedAttraction.coordinates.Latitude, lng: selectedAttraction.coordinates.Longitude}}
               >
                 <div>
                   <img src={selectedAttraction.img} alt="attraction image"/>
@@ -88,12 +119,20 @@ const Map = ({attractions, selectedAttraction, setSelecteddAttraction, setVisibi
                       }}>
                     Learn More
                   </h2>
+                  <hr></hr>
+                  <div className="extraInfo addwaypoint"
+                    onClick={()=> {
+                      onAdd(id, selectedAttraction.title + ', '+ selectedAttraction.location, selectedAttraction.coordinates.Latitude, selectedAttraction.coordinates.Longitude);
+                      setAdded(true);
+                      }}>
+                    <img style={{width:"2em", display:"inline"}} src="./add-pin.svg" alt="add pin"/> 
+                    <h2 style={{paddingInline:"0px", display:"inline"}}>{added? ("Waypoint Added!"):("Add Waypoint")}</h2>
+                  </div>
                 </div>
-              </Popup>
+              </InfoWindow>
             ) : null}
-          </ReactMapGL>
-      </div>
-  )
-}
+    </GoogleMap>
+  )})
+);
 
-export default Map
+export default Map;
